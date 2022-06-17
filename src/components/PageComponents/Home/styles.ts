@@ -50,3 +50,7 @@ export const ValeuCategory = styled.span`
   font-size: 15px;
   color: #888;
 `;
+
+export const SectionOffers = styled.div``;
+export const WapperTop = styled.div``;
+export const TitleSection = styled.h3``;

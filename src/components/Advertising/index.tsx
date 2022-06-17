@@ -22,7 +22,12 @@ const responsive = {
 export const Advertising: React.FC = (): JSX.Element => {
   return (
     <Container>
-      <Carousel responsive={responsive} autoPlay infinite>
+      <Carousel
+        responsive={responsive}
+        autoPlay
+        infinite
+        customTransition="ease 2s"
+      >
         {images.map(item => (
           <WapperImage>
             <Image img={item.value} />
