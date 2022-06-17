@@ -99,6 +99,7 @@ export const Wapper3 = styled.div`
 
 export const WapperCategory = styled.div`
   height: 40px;
+  width: 100%;
 `;
 
 export const ListCategory = styled.ul`
@@ -106,9 +107,19 @@ export const ListCategory = styled.ul`
   list-style: none;
   align-items: center;
   height: 100%;
-  max-width: 700px;
+  max-width: 650px;
   width: 100%;
   justify-content: space-between;
+
+  a {
+    color: ${({ theme }) => theme.colors.font};
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+
+  a :hover {
+    color: #222;
+  }
 `;
 
 export const ItemCategory = styled.li`
@@ -116,11 +127,27 @@ export const ItemCategory = styled.li`
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.4px;
-
-  a {
-    color: #555;
-    text-decoration: none;
-  }
+  padding: 7px 0px;
 `;
 
-export const WapperUser = styled.div``;
+export const WapperUser = styled.div`
+  display: flex;
+  max-width: 250px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.font};
+    font-family: ${({ theme }) => theme.font.primary};
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    transition: 0.3s ease;
+
+    :hover {
+      color: #222;
+    }
+  }
+`;

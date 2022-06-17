@@ -48,11 +48,11 @@ export const HeaderComponent: React.FC = (): JSX.Element => {
             <WapperCategory>
               <ListCategory>
                 {category.map(item => (
-                  <ItemCategory key={item.id}>
-                    <Link href={`/category/${item.value}`}>
-                      <a>{item.value}</a>
-                    </Link>
-                  </ItemCategory>
+                  <Link href={`/category/${item.value}`}>
+                    <a>
+                      <ItemCategory key={item.id}>{item.value}</ItemCategory>
+                    </a>
+                  </Link>
                 ))}
               </ListCategory>
             </WapperCategory>
@@ -66,7 +66,7 @@ export const HeaderComponent: React.FC = (): JSX.Element => {
               </Link>
               <Link href="/bag">
                 <a>
-                  <BsCart2 />
+                  <BsCart2 size={23} />
                 </a>
               </Link>
             </WapperUser>
