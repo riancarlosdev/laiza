@@ -24,7 +24,6 @@
       "@styles/*": ["styles/*"],
       "@validators/*": ["validators/*"],
       "@default-types": ["interfaces/index.ts"],
-      "@icons/": ["/components/Icons/index.ts"]
     },
   },
   "include": [
