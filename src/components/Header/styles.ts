@@ -62,7 +62,7 @@ export const InputSearch = styled.input`
   height: 100%;
   border: none;
   outline: none;
-  box-shadow: 2px 2px 2px #000;
+  box-shadow: 1px 1px 3px #555;
   padding-left: 10px;
   font-size: 17px;
 
@@ -117,7 +117,7 @@ export const ListCategory = styled.ul`
   a {
     color: #fff;
     text-decoration: none;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
   }
 
   a :hover {
@@ -147,7 +147,7 @@ export const WapperUser = styled.div`
     font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.4px;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
 
     :hover {
       color: #222;
