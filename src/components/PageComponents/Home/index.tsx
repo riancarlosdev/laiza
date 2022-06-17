@@ -1,9 +1,5 @@
-import { Container } from './styles';
+import { Advertising } from '@components/Advertising';
 
 export const HomePage: React.FC = (): JSX.Element => {
-  return (
-    <Container>
-      <p>Home Page</p>
-    </Container>
-  );
+  return <Advertising />;
 };

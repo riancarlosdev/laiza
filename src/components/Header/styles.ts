@@ -7,6 +7,9 @@ export const Container = styled.header`
 
   display: flex;
   align-items: center;
+  box-shadow: 0 0px 3px #111;
+  position: relative;
+  z-index: 1;
 `;
 
 export const Wapper = styled.div`
@@ -28,7 +31,7 @@ export const Wapper2 = styled.div`
 
 export const WapperAnnouncement = styled.div`
   font-family: sans-serif;
-  color: #444;
+  color: #fff;
 
   span,
   p {
@@ -59,7 +62,7 @@ export const InputSearch = styled.input`
   height: 100%;
   border: none;
   outline: none;
-  box-shadow: 2px 2px 3px ${({ theme }) => theme.colors.shadown_1};
+  box-shadow: 2px 2px 2px #000;
   padding-left: 10px;
   font-size: 17px;
 
@@ -112,7 +115,7 @@ export const ListCategory = styled.ul`
   justify-content: space-between;
 
   a {
-    color: ${({ theme }) => theme.colors.font};
+    color: #fff;
     text-decoration: none;
     transition: 0.3s ease;
   }
@@ -123,9 +126,9 @@ export const ListCategory = styled.ul`
 `;
 
 export const ItemCategory = styled.li`
-  font-family: ${({ theme }) => theme.font.primary};
-  font-size: 14px;
-  font-weight: 600;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 15px;
   letter-spacing: 0.4px;
   padding: 7px 0px;
 `;
@@ -139,10 +142,10 @@ export const WapperUser = styled.div`
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.font};
-    font-family: ${({ theme }) => theme.font.primary};
+    color: #fff;
+    font-family: sans-serif;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.4px;
     transition: 0.3s ease;
 
