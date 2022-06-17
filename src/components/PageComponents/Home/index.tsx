@@ -13,6 +13,7 @@ export const HomePage: React.FC = (): JSX.Element => {
   return (
     <>
       <Advertising />
+      Casaco Macio com Capuz de Pelucia Quente Pele
       <MaxContainerComponent>
         <WapperSeactionCategory>
           <ListCategoryWithImage>
