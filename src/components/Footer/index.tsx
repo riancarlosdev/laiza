@@ -28,7 +28,7 @@ export const FooterComponent: React.FC = (): JSX.Element => {
             ))}
           </ListLinksCompany>
           <WapperInfoCompany>
-            <Copy>Copyright © Desenvolvido por Rian</Copy>
+            <Copy>Copyright © Sendo desenvolvido por Rian</Copy>
             <WapperCnpjEnd>
               <Cnpj>CNPJ n.º {cnpj}</Cnpj>
               <End>{endereco}</End>

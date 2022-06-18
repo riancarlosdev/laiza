@@ -46,11 +46,11 @@ export const WapperCnpjEnd = styled.div``;
 export const Cnpj = styled.span`
   color: ${({ theme }) => theme.colors.font_hiper_light};
   font-family: sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   margin-bottom: 10px;
 `;
 export const End = styled.p`
   color: ${({ theme }) => theme.colors.font_hiper_light};
   font-family: sans-serif;
-  font-size: 13px;
+  font-size: 12px;
 `;
