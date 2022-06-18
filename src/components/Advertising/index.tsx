@@ -1,4 +1,3 @@
-import { MaxContainerComponent } from '@components/Global/MaxContainer';
 import Carousel from 'react-multi-carousel';
 import { images } from './data/images';
 import { Container, Image, WapperImage } from './styles';

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   Container,
   Image,
@@ -17,6 +18,7 @@ interface ProductProps {
   price_actual: string;
   porcent?: string;
   info_frete: boolean;
+  img?: string;
 }
 
 export const ProductItem: React.FC<ProductProps> = ({
@@ -25,21 +27,26 @@ export const ProductItem: React.FC<ProductProps> = ({
   title,
   porcent,
   price_old,
+  img,
 }): JSX.Element => {
   return (
-    <Container>
-      <Image />
-      <WapperInfo>
-        <TitleProduct>{title}</TitleProduct>
-        <WapperPrice>
-          <PriceOld>R$ {price_old}</PriceOld>
-          <WapperDraftPrice>
-            <PriceActual>R$ {price_actual}</PriceActual>
-            <PorcetPrice>{porcent}% OFF</PorcetPrice>
-          </WapperDraftPrice>
-        </WapperPrice>
-        {info_frete && <InfoFrete />}
-      </WapperInfo>
-    </Container>
+    <Link href="/">
+      <a>
+        <Container>
+          <Image img={img} />
+          <WapperInfo>
+            <TitleProduct>{title}</TitleProduct>
+            <WapperPrice>
+              <PriceOld>R$ {price_old}</PriceOld>
+              <WapperDraftPrice>
+                <PriceActual>R$ {price_actual}</PriceActual>
+                <PorcetPrice>{porcent}% OFF</PorcetPrice>
+              </WapperDraftPrice>
+            </WapperPrice>
+            {info_frete && <InfoFrete>Frete Gratís</InfoFrete>}
+          </WapperInfo>
+        </Container>
+      </a>
+    </Link>
   );
 };

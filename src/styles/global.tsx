@@ -10,6 +10,10 @@ const GlobalStyles = createGlobalStyle`
   body {
     background: #eeeeeeed;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export default GlobalStyles;

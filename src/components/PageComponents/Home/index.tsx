@@ -3,6 +3,7 @@ import { MaxContainerComponent } from '@components/Global/MaxContainer';
 import { ProductItem } from '@components/Product';
 import Link from 'next/link';
 import { categorys } from './data/categorys';
+import { offers } from './data/offers';
 import {
   ImageCategory,
   ItemCategoryWithImage,
@@ -12,6 +13,8 @@ import {
   ValeuCategory,
   WapperSeactionCategory,
   WapperTop,
+  WapperOfferProduct,
+  WapperOfferProductItem,
 } from './styles';
 
 export const HomePage: React.FC = (): JSX.Element => {
@@ -38,13 +41,13 @@ export const HomePage: React.FC = (): JSX.Element => {
                 <a>Ver mais</a>
               </Link>
             </WapperTop>
-            <ProductItem
-              info_frete
-              price_actual="137,00"
-              title="Casaco Macio com Capuz de Pelucia Quente Pele"
-              porcent="10"
-              price_old="149,98"
-            />
+            <WapperOfferProduct>
+              {offers.map(item => (
+                <WapperOfferProductItem>
+                  <ProductItem {...item} />
+                </WapperOfferProductItem>
+              ))}
+            </WapperOfferProduct>
           </SectionOffers>
         </>
       </MaxContainerComponent>

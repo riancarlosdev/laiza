@@ -12,7 +12,7 @@ export const ListCategoryWithImage = styled.ul`
 export const ItemCategoryWithImage = styled.li`
   display: flex;
   align-items: center;
-  max-width: 160px;
+  max-width: 184px;
   width: 100%;
   cursor: pointer;
 
@@ -51,6 +51,45 @@ export const ValeuCategory = styled.span`
   color: #888;
 `;
 
-export const SectionOffers = styled.div``;
-export const WapperTop = styled.div``;
-export const TitleSection = styled.h3``;
+export const SectionOffers = styled.div`
+  margin-top: 40px;
+`;
+
+export const WapperTop = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: ${({ theme }) => theme.colors.secundary};
+  }
+`;
+
+export const TitleSection = styled.h3`
+  margin-right: 12px;
+
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  font-family: ${({ theme }) => theme.font.primary};
+  color: ${({ theme }) => theme.colors.font};
+  font-size: 23px;
+`;
+
+export const WapperOfferProduct = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const WapperOfferProductItem = styled.div`
+  margin: 0 6px;
+
+  :first-child {
+    margin-left: 0;
+  }
+  :last-child {
+    margin-right: 0;
+  }
+`;
