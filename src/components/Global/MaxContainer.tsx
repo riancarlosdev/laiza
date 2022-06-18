@@ -5,7 +5,7 @@ interface LayoutProps {
 }
 
 const Container = styled.div`
-  max-width: 1100px;
+  max-width: 1160px;
   width: 100%;
   margin: 0 auto;
 `;

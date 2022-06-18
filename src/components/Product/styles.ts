@@ -9,9 +9,14 @@ export const Container = styled.div`
   box-shadow: 0 0 0.8px ${({ theme }) => theme.colors.shadown_1};
   border-radius: 1px;
   padding: 1px 1px 10px;
+  transition: 0.2s ease;
 
   :hover h2 {
     color: ${({ theme }) => theme.colors.font};
+  }
+
+  :hover {
+    box-shadow: 0 4px 11px ${({ theme }) => theme.colors.shadown_1};
   }
 
   cursor: pointer;
