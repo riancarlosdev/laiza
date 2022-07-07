@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }): JSX.Element {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Head>
-        <title>Laiza</title>
+        <title>All here</title>
       </Head>
       <Component {...pageProps} />
     </ThemeProvider>

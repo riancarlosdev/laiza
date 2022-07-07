@@ -87,7 +87,6 @@ export const PorcetPrice = styled.span`
 
 export const InfoFrete = styled.p`
   color: #0bc404;
-  font-family: sans-serif;
   font-size: 15px;
-  margin-top: 3px;
+  margin-top: 15px;
 `;

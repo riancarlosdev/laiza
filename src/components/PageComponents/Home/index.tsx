@@ -43,9 +43,13 @@ export const HomePage: React.FC = (): JSX.Element => {
             </WapperTop>
             <WapperOfferProduct>
               {offers.map(item => (
-                <WapperOfferProductItem>
-                  <ProductItem {...item} />
-                </WapperOfferProductItem>
+                <Link href="/product/545">
+                  <a>
+                    <WapperOfferProductItem>
+                      <ProductItem {...item} />
+                    </WapperOfferProductItem>
+                  </a>
+                </Link>
               ))}
             </WapperOfferProduct>
           </SectionOffers>

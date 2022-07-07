@@ -30,23 +30,29 @@ export const ProductItem: React.FC<ProductProps> = ({
   img,
 }): JSX.Element => {
   return (
-    <Link href="/">
-      <a>
-        <Container>
-          <Image img={img} />
-          <WapperInfo>
-            <TitleProduct>{title}</TitleProduct>
-            <WapperPrice>
-              <PriceOld>R$ {price_old}</PriceOld>
-              <WapperDraftPrice>
-                <PriceActual>R$ {price_actual}</PriceActual>
-                <PorcetPrice>{porcent}% OFF</PorcetPrice>
-              </WapperDraftPrice>
-            </WapperPrice>
-            {info_frete && <InfoFrete>Frete Gratís</InfoFrete>}
-          </WapperInfo>
-        </Container>
-      </a>
-    </Link>
+    <Container>
+      <Image img={img} />
+      <WapperInfo>
+        <TitleProduct>{title}</TitleProduct>
+        <WapperPrice>
+          <PriceOld>R$ {price_old}</PriceOld>
+          <WapperDraftPrice>
+            <PriceActual>R$ {price_actual}</PriceActual>
+            <PorcetPrice>{porcent}% OFF </PorcetPrice>
+          </WapperDraftPrice>
+          {info_frete && (
+            <p
+              style={{
+                marginTop: 14,
+                color: '#13ac0e',
+                fontFamily: 'sans-serif',
+              }}
+            >
+              Frete Gratís
+            </p>
+          )}
+        </WapperPrice>
+      </WapperInfo>
+    </Container>
   );
 };
