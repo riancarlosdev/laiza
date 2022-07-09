@@ -54,8 +54,13 @@ export const WapperInfoProduct = styled.div`
   padding: 5px;
   border: 1px solid #dbdbdb;
   box-shadow: 0 0 4px #bdbdbde4;
+`;
 
+export const WapperContentInfoTop = styled.div`
   display: flex;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #f3f3f3;
 `;
 
 export const WapperImagesProduct = styled.div`
@@ -248,3 +253,119 @@ export const ButtonAction = styled.button<{ color: 'pay' | 'cart' }>`
 `;
 
 // export const ButtonSeeOptions = styled.button``;
+
+export const WapperInfoPlusProduct = styled.div`
+  margin-top: 40px;
+`;
+
+export const WapperInfoTopPlus = styled.div<{ padding?: boolean }>`
+  padding-left: ${({ padding }) => padding && '20px'};
+`;
+
+export const ValueTopInfoInfoPlus = styled.h2`
+  font-family: ${({ theme }) => theme.font.primary};
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 35px;
+`;
+
+export const WapperCardsInfos = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 5px;
+
+  max-width: 930px;
+`;
+
+export const ListInformationProductPlus = styled.ul`
+  max-width: 300px;
+  width: 100%;
+  margin: 15px 0;
+`;
+
+export const ItemInformation = styled.li`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ValueInformation = styled.span`
+  font-family: ${({ theme }) => theme.font.primary};
+  font-size: 20px;
+`;
+
+export const WapperAllValueOfInformation = styled.div`
+  margin-top: 8px;
+
+  max-width: 300px;
+  width: 100%;
+  background: #f8f8f8;
+  border-radius: 5px;
+  overflow: hidden;
+`;
+
+export const WapperValues = styled.div`
+  margin: 5px 0;
+  padding: 15px 15px;
+  :nth-child(odd) {
+    background: #f0f0f0;
+  }
+
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+
+  :first-child {
+    margin-top: 0;
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+`;
+
+export const ResponseValueInfo = styled.span`
+  color: #444;
+`;
+export const ValueInfoContent = styled.span`
+  color: #666;
+`;
+
+export const WapperOfInfos = styled.div<{ padding?: boolean }>`
+  padding-left: ${({ padding }) => padding && '20px'};
+  padding-right: ${({ padding }) => padding && '20px'};
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #f3f3f3;
+
+  :last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+`;
+
+export const DescriptionProduct = styled.p`
+  margin-top: 10px;
+  font-family: ${({ theme }) => theme.font.primary};
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+`;
+
+export const WapperOfferProduct = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+`;
+
+export const WapperOfferProductItem = styled.div`
+  margin: 0 6px;
+
+  :first-child {
+    margin-left: 0;
+  }
+  :last-child {
+    margin-right: 0;
+  }
+`;

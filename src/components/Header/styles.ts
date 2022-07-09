@@ -110,7 +110,7 @@ export const ListCategory = styled.ul`
   list-style: none;
   align-items: center;
   height: 100%;
-  max-width: 650px;
+  max-width: 640px;
   width: 100%;
   justify-content: space-between;
 

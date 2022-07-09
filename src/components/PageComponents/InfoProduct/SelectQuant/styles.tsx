@@ -59,6 +59,7 @@ export const WapperModalSelect = styled.div<{ open: boolean }>`
   width: 100%;
   padding: 3px;
   background: #f1f1f1;
+  box-shadow: 4px 4px 4px #7d7d7d63;
 `;
 
 export const OptionQnt = styled.span`
