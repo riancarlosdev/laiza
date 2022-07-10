@@ -9,6 +9,7 @@ import {
   ValueTitleSetAddress,
   WapperAddNewAddress,
   WapperAddressExistent,
+  WapperContentAddressSave,
   WapperInfoAddressEx,
   WapperInformationNewAddress,
   WapperInput,
@@ -54,11 +55,11 @@ const RenderItemAddress: React.FC<ItemAddress> = ({
   state,
 }): JSX.Element => (
   <WapperAddressExistent>
-    <CheckBox type="checkbox" />
+    <CheckBox type="radio" name="address-exist" />
     <WapperInfoAddressEx>
       <ValueAddress>{address}</ValueAddress>
       <PlusAddress>
-        N° {number},{city} ,{state} - {country}
+        N° {number}, {city}, {state} - {country}
       </PlusAddress>
     </WapperInfoAddressEx>
   </WapperAddressExistent>
@@ -108,13 +109,15 @@ export const AddressComponent: React.FC = (): JSX.Element => {
               ou <span>Selecione um endereço salvo</span>
             </ValueTitleSetAddress>
           </WapperTitleSetAddressExistent>
-          <RenderItemAddress
-            number="28"
-            city="São Sebastião do Passé"
-            address="Rua José Casemiro Pena"
-            state="Bahia"
-            country="Brasil"
-          />
+          <WapperContentAddressSave>
+            <RenderItemAddress
+              number="28"
+              city="São Sebastião do Passé"
+              address="Rua José Casemiro Pena"
+              state="Bahia"
+              country="Brasil"
+            />
+          </WapperContentAddressSave>
         </WapperSetAddressExistent>
       </>
     </LayoutComponentPay>

@@ -2,11 +2,17 @@ import { LayoutComponentPay } from '../Layout';
 import {
   CheckBox,
   ItemFormPay,
+  ItemProduct,
+  ValueInfoUser,
   ValueNameForm,
+  ValueProduct,
+  ValueResum,
   ValueTitleResum,
+  WapperContentInfo,
   WapperContentInfoPay,
   WapperFormOfPayContent,
   WapperItemsFormOfPay,
+  WapperOuther,
   WapperResumPay,
   WapperTitleResum,
 } from './styles';
@@ -29,6 +35,7 @@ const RenderItemFormOfPay: React.FC<ItemFormOfPayProps> = ({
 export const FormOfPayComponent: React.FC = (): JSX.Element => {
   return (
     <LayoutComponentPay
+      to_back
       title="Forma de Pagamento"
       sub_title="Como será a forma de pagamento?"
     >
@@ -37,8 +44,41 @@ export const FormOfPayComponent: React.FC = (): JSX.Element => {
           <WapperTitleResum>
             <ValueTitleResum>Resumo da compra</ValueTitleResum>
           </WapperTitleResum>
-          <WapperContentInfoPay>Resumo da compra</WapperContentInfoPay>
+          <WapperContentInfoPay>
+            <WapperContentInfo>
+              <ValueInfoUser>Rian Carlos de Sousa Pinho</ValueInfoUser>
+              <ValueInfoUser>095.733.665-92</ValueInfoUser>
+              <ValueInfoUser>
+                Rua José Casemiro Pena, 28, São Sebastião do Passé, Bahia -
+                Brasil
+              </ValueInfoUser>
+              <ValueInfoUser>43850-000</ValueInfoUser>
+              <ValueInfoUser>Codigo do pedido: 215452</ValueInfoUser>
+            </WapperContentInfo>
+            <WapperContentInfo>
+              {['1', '2'].map(item => (
+                <ItemProduct key={item}>
+                  <ValueProduct>
+                    Casaco de Moletom da Nike Estampado
+                  </ValueProduct>
+                  <ValueProduct>02x</ValueProduct>
+                  <ValueProduct>R$ 150,00</ValueProduct>
+                </ItemProduct>
+              ))}
+            </WapperContentInfo>
+            <WapperContentInfo>
+              <WapperOuther>
+                <ValueResum>Frete</ValueResum>
+                <ValueResum>R$ 00,00</ValueResum>
+              </WapperOuther>
+              <WapperOuther>
+                <ValueResum>Total</ValueResum>
+                <ValueResum id="total">R$ 300,00</ValueResum>
+              </WapperOuther>
+            </WapperContentInfo>
+          </WapperContentInfoPay>
         </WapperResumPay>
+
         <WapperItemsFormOfPay>
           <RenderItemFormOfPay value="Cartão de Creditos" />
           <RenderItemFormOfPay value="Cartão de Debito" />

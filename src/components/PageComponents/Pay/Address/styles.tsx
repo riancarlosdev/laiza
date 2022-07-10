@@ -63,10 +63,57 @@ export const Input = styled.input`
 
 // ITEM ADDRESS EXISTENT
 export const WapperSetAddressExistent = styled.div``;
-export const WapperTitleSetAddressExistent = styled.div``;
-export const ValueTitleSetAddress = styled.span``;
-export const WapperAddressExistent = styled.div``;
-export const CheckBox = styled.input``;
-export const WapperInfoAddressEx = styled.div``;
+
+export const WapperTitleSetAddressExistent = styled.div`
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+`;
+
+export const ValueTitleSetAddress = styled.p`
+  font-size: 18px;
+  font-family: ${({ theme }) => theme.font.primary};
+`;
+
+export const WapperContentAddressSave = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
+
+export const WapperAddressExistent = styled.label`
+  display: flex;
+  align-items: center;
+  max-width: 280px;
+  width: 100%;
+  height: 80px;
+  background: #e6e6e6;
+  padding: 10px;
+  cursor: pointer;
+`;
+
+export const CheckBox = styled.input`
+  width: 20px;
+  height: 20px;
+`;
+
+export const WapperInfoAddressEx = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: ${({ theme }) => theme.font.primary};
+  height: 100%;
+  margin-left: 10px;
+`;
+
 export const ValueAddress = styled.p``;
-export const PlusAddress = styled.p``;
+
+export const PlusAddress = styled.p`
+  font-size: 15px;
+  font-family: sans-serif;
+  line-height: 18px;
+`;
