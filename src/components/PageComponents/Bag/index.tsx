@@ -1,4 +1,5 @@
 import { ProductItem } from '@components/Product';
+import Link from 'next/link';
 import { offers } from '../Home/data/offers';
 import { AmountComponent } from './OptionsProduct/amount';
 import { ColorComponent } from './OptionsProduct/Color';
@@ -133,7 +134,11 @@ export const BagComponent: React.FC = (): JSX.Element => {
               </WapperQuestions>
 
               <WapperButtonPay>
-                <ButtonSale>Finalizar Compra</ButtonSale>
+                <Link href="/pay">
+                  <a>
+                    <ButtonSale>Finalizar Compra</ButtonSale>
+                  </a>
+                </Link>
               </WapperButtonPay>
             </WapperContentSale>
           </WapperInfomartionTotalSale>
