@@ -1,3 +1,5 @@
+import { useCallback } from 'react';
+import { stepProps } from '..';
 import { LayoutComponentPay } from '../Layout';
 import {
   CheckBox,
@@ -32,17 +34,35 @@ const RenderItemFormOfPay: React.FC<ItemFormOfPayProps> = ({
   </ItemFormPay>
 );
 
-export const FormOfPayComponent: React.FC = (): JSX.Element => {
+export const FormOfPayComponent: React.FC<stepProps> = ({
+  setStep,
+  setChangeStep,
+}): JSX.Element => {
   return (
     <LayoutComponentPay
+      funcClickNext={() => {
+        setChangeStep(true);
+        setTimeout(() => {
+          setStep('PAY');
+          setChangeStep(false);
+        }, 600);
+      }}
+      funcClickBackTo={() => {
+        setChangeStep(true);
+        setTimeout(() => {
+          setStep('ADDRESS');
+          setChangeStep(false);
+        }, 600);
+      }}
       to_back
       title="Forma de Pagamento"
       sub_title="Como será a forma de pagamento?"
+      next
     >
       <WapperFormOfPayContent>
         <WapperResumPay>
           <WapperTitleResum>
-            <ValueTitleResum>Resumo da compra</ValueTitleResum>
+            <ValueTitleResum>Resumo do pedido</ValueTitleResum>
           </WapperTitleResum>
           <WapperContentInfoPay>
             <WapperContentInfo>

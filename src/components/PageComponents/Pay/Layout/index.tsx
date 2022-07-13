@@ -13,6 +13,9 @@ interface LayoutPayProps {
   title: string;
   sub_title: string;
   to_back?: boolean;
+  next?: boolean;
+  funcClickNext?: () => void;
+  funcClickBackTo?: () => void;
 }
 
 export const LayoutComponentPay: React.FC<LayoutPayProps> = ({
@@ -20,6 +23,9 @@ export const LayoutComponentPay: React.FC<LayoutPayProps> = ({
   title,
   sub_title,
   to_back,
+  funcClickNext,
+  funcClickBackTo,
+  next,
 }): JSX.Element => {
   return (
     <WapperContainer>
@@ -31,8 +37,12 @@ export const LayoutComponentPay: React.FC<LayoutPayProps> = ({
       <WapperContent>
         <div>{children}</div>
         <WapperButtonNext to_back={to_back}>
-          {to_back && <ButtonNext to_back={to_back}>Voltar</ButtonNext>}
-          <ButtonNext>Continuar</ButtonNext>
+          {to_back && (
+            <ButtonNext onClick={funcClickBackTo} to_back={to_back}>
+              Voltar
+            </ButtonNext>
+          )}
+          {next && <ButtonNext onClick={funcClickNext}>Continuar</ButtonNext>}
         </WapperButtonNext>
       </WapperContent>
     </WapperContainer>

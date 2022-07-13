@@ -1,3 +1,5 @@
+import { useCallback } from 'react';
+import { stepProps } from '..';
 import { LayoutComponentPay } from '../Layout';
 import {
   CheckBox,
@@ -65,11 +67,22 @@ const RenderItemAddress: React.FC<ItemAddress> = ({
   </WapperAddressExistent>
 );
 
-export const AddressComponent: React.FC = (): JSX.Element => {
+export const AddressComponent: React.FC<stepProps> = ({
+  setStep,
+  setChangeStep,
+}): JSX.Element => {
   return (
     <LayoutComponentPay
       title="Endereço"
       sub_title="Onde vamos entregar a sua compra?"
+      next
+      funcClickNext={() => {
+        setChangeStep(true);
+        setTimeout(() => {
+          setStep('FORM');
+          setChangeStep(false);
+        }, 600);
+      }}
     >
       <>
         <WapperInformationNewAddress>

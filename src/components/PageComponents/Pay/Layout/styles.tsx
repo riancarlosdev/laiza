@@ -35,7 +35,7 @@ export const WapperContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: calc(660px - 96px);
+  min-height: calc(660px - 80px);
   padding: 0 10px;
   background: #fbfbfb;
 `;
