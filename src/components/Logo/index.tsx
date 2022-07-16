@@ -1,10 +1,15 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface LogoProps {
+  type?: '1' | '2';
+}
+
+export const Container = styled.div<LogoProps>`
   a {
     text-decoration: none;
-    color: #fff;
+    color: ${({ theme, type }) =>
+      type === '1' ? '#fff' : theme.colors.secundary};
     font-family: ${({ theme }) => theme.font.primary};
     font-size: 22px;
     outline: none;
@@ -13,9 +18,11 @@ export const Container = styled.div`
   }
 `;
 
-export const LogoComponent: React.FC = (): JSX.Element => {
+export const LogoComponent: React.FC<LogoProps> = ({
+  type = '1',
+}): JSX.Element => {
   return (
-    <Container>
+    <Container type={type}>
       <Link href="/">
         <a>
           ---- <br /> mercado

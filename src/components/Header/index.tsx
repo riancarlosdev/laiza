@@ -58,9 +58,7 @@ export const HeaderComponent: React.FC = (): JSX.Element => {
             </WapperCategory>
 
             <WapperUser>
-              <Link href="/register/user">
-                <a>Crie sua conta</a>
-              </Link>
+              <a href="/account/register">Crie sua conta</a>
               <Link href="/login/user">
                 <a>Entre</a>
               </Link>
