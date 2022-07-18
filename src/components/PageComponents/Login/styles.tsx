@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const WapperContainer = styled.div``;
+
 export const WapperOuther = styled.div`
   display: flex;
   width: 100%;
