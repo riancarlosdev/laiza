@@ -1,32 +1,22 @@
-import {
-  LoginRegisterLayout,
-  WapperInputComponent,
-} from '@components/login-register/layout';
-import { ButtonRegister, WapperButton, WapperOuther } from './styles';
+import { useState } from 'react';
+import { StepAddAddressComponent } from './Steps/AddAddress';
+import { StepCodeConfirmComponent } from './Steps/ConfirmEmail';
+import { StepCreateComponent } from './Steps/Create';
+
+export interface stepProps {
+  setStepRegister: (value: number) => void;
+}
 
 export const RegisterComponent: React.FC = (): JSX.Element => {
-  return (
-    <LoginRegisterLayout page="register">
-      <>
-        <WapperOuther>
-          <WapperInputComponent value="Primeiro nome" />
-          <WapperInputComponent value="Sobrenome" />
-        </WapperOuther>
-        <WapperOuther>
-          <WapperInputComponent value="CPF" />
-          <WapperInputComponent value="Data de nascimento" />
-        </WapperOuther>
-        <WapperOuther>
-          <WapperInputComponent id="email" value="Email" />
-        </WapperOuther>
-        <WapperOuther>
-          <WapperInputComponent type="password" see value="Senha" />
-          <WapperInputComponent type="password" value="Confirm senha" />
-        </WapperOuther>
-        <WapperButton>
-          <ButtonRegister>Criar Conta</ButtonRegister>
-        </WapperButton>
-      </>
-    </LoginRegisterLayout>
-  );
+  const [stepRegister, setStepRegister] = useState(0);
+
+  if (stepRegister === 1) {
+    return <StepCodeConfirmComponent setStepRegister={setStepRegister} />;
+  }
+
+  if (stepRegister === 2) {
+    return <StepAddAddressComponent />;
+  }
+
+  return <StepCreateComponent setStepRegister={setStepRegister} />;
 };

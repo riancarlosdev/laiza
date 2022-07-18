@@ -16,10 +16,12 @@ export const WapperContent = styled.div`
 
 export const TitlePage = styled.h1`
   font-family: ${({ theme }) => theme.font.primary};
-  margin-bottom: 25px;
+  margin: 0 auto 25px auto;
   font-size: 19px;
   color: ${({ theme }) => theme.colors.font};
   text-align: center;
+  max-width: 410px;
+  line-height: 28px;
 `;
 
 export const WapperLogo = styled.div`

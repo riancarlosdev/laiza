@@ -20,7 +20,7 @@ import {
 
 interface LoginRegisterProps {
   children: JSX.Element;
-  page: 'register' | 'login';
+  page: 'register' | 'login' | 'confirm_email' | 'add_address';
   title?: string;
 }
 
@@ -30,6 +30,7 @@ interface InputProps {
   placeholder?: string;
   id?: string;
   see?: boolean;
+  onChange?: () => void;
 }
 
 export const WapperInputComponent: React.FC<InputProps> = ({
@@ -38,13 +39,18 @@ export const WapperInputComponent: React.FC<InputProps> = ({
   value,
   id,
   see,
+  onChange,
 }): JSX.Element => {
   const [seeState, setSee] = useState(false);
   return (
     <WapperInput id={id}>
       <ValueInput>{value}</ValueInput>
       <Wapper2Input>
-        <Input type={seeState ? 'text' : type} placeholder={placeholder} />
+        <Input
+          onChange={onChange}
+          type={seeState ? 'text' : type}
+          placeholder={placeholder}
+        />
         {see && (
           <ButtonSee type="button" onClick={() => setSee(!seeState)}>
             {seeState ? (
@@ -72,19 +78,21 @@ export const LoginRegisterLayout: React.FC<LoginRegisterProps> = ({
       {title && <TitlePage>{title}</TitlePage>}
       <WapperInterContent>
         <Form>{children}</Form>
-        <WapperInfoLogin>
-          <ValueInfo>
-            {page === 'register' ? 'Já tem conta?' : 'Ainda não tem conta?'}
+        {page !== 'confirm_email' && page !== 'add_address' && (
+          <WapperInfoLogin>
+            <ValueInfo>
+              {page === 'register' ? 'Já tem conta?' : 'Ainda não tem conta?'}
 
-            <Link
-              href={
-                page === 'register' ? '/account/login' : '/account/register'
-              }
-            >
-              <a>{page === 'register' ? 'Entrar' : 'Criar conta'}</a>
-            </Link>
-          </ValueInfo>
-        </WapperInfoLogin>
+              <Link
+                href={
+                  page === 'register' ? '/account/login' : '/account/register'
+                }
+              >
+                <a>{page === 'register' ? 'Entrar' : 'Criar conta'}</a>
+              </Link>
+            </ValueInfo>
+          </WapperInfoLogin>
+        )}
       </WapperInterContent>
     </WapperContent>
   </WapperContainer>
