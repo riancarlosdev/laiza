@@ -150,7 +150,7 @@ export const WapperUser = styled.div`
     transition: 0.2s ease;
 
     :hover {
-      color: #222;
+      color: #dfdfdf;
     }
   }
 `;
