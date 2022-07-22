@@ -133,9 +133,9 @@ export const ItemCategory = styled.li`
   padding: 7px 0px;
 `;
 
-export const WapperUser = styled.div`
+export const WapperUser = styled.div<{ logged?: boolean }>`
   display: flex;
-  max-width: 250px;
+  max-width: ${({ logged }) => (logged ? '250px' : '140px')};
   width: 100%;
   justify-content: space-between;
   align-items: center;

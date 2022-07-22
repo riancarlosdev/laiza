@@ -57,7 +57,7 @@ export const HeaderComponent: React.FC = (): JSX.Element => {
                 <ListCategory>
                   {category.map(item => (
                     <ItemCategory>
-                      <Link key={item.id} href={`/category/${item.value}`}>
+                      <Link key={item.id} href={`/${item.link}`}>
                         <a>{item.value}</a>
                       </Link>
                     </ItemCategory>
@@ -65,11 +65,11 @@ export const HeaderComponent: React.FC = (): JSX.Element => {
                 </ListCategory>
               </WapperCategory>
 
-              <WapperUser>
+              <WapperUser logged={logged}>
                 {!logged && (
                   <>
                     <Link href="/account/register">
-                      <a>Crie sua conta</a>
+                      <a>Criar conta</a>
                     </Link>
                     <Link href="/account/login">
                       <a>Entre</a>
@@ -82,16 +82,14 @@ export const HeaderComponent: React.FC = (): JSX.Element => {
                     <Link href="/account/user">
                       <a>Minha conta</a>
                     </Link>
+                    <Link href="/bag">
+                      <a>Carrinho</a>
+                    </Link>
                     <Link href="/">
                       <a onClick={() => setLogged(false)}>Sair</a>
                     </Link>
                   </>
                 )}
-                <Link href="/bag">
-                  <a>
-                    <BsCart2 size={23} />
-                  </a>
-                </Link>
               </WapperUser>
             </Wapper3>
           )}

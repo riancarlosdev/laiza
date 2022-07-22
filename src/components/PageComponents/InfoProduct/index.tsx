@@ -1,5 +1,7 @@
+import { BackRouterComponent } from '@components/BackRouter';
 import { ProductItem } from '@components/Product';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { offers } from '../Home/data/offers';
 import { info_product } from './data';
@@ -20,7 +22,6 @@ import {
   ValueInfoFrete,
   ValueInfoNew,
   ValueInformation,
-  ValueInfoRoute,
   ValueInfoTop,
   ValueOldPrice,
   ValuePorcent,
@@ -38,7 +39,6 @@ import {
   WapperInfoOfProduct,
   WapperInfoPlusProduct,
   WapperInfoProduct,
-  WapperInfoRoute,
   WapperInfoTop,
   WapperInfoTopPlus,
   WapperOfferProduct,
@@ -56,26 +56,29 @@ export const InfoProductComponent: React.FC = (): JSX.Element => {
     image: info_product.images[0].image,
   });
 
+  const { query } = useRouter();
+
   return (
     <WapperContainer>
-      <WapperInfoRoute>
-        <Link href="/">
-          <a>Voltar</a>
-        </Link>
-        <ValueInfoRoute>
-          <Link href="/">
-            <a>Pagina</a>
-          </Link>{' '}
-          {'>'}{' '}
-          <Link href="/">
-            <a>Pagina</a>
-          </Link>{' '}
-          {'>'}{' '}
-          <Link href="/">
-            <a>Pagina</a>
-          </Link>
-        </ValueInfoRoute>
-      </WapperInfoRoute>
+      <BackRouterComponent
+        value={[
+          {
+            id: '1',
+            back_to: `${query?.categoria?.toString()}`,
+            value: query?.categoria?.toString(),
+          },
+          {
+            id: '2',
+            back_to: `${query?.categoria?.toString()}/${query?.sub_categoria?.toString()}`,
+            value: query?.sub_categoria?.toString(),
+          },
+          {
+            id: '3',
+            back_to: `${query?.produto?.toString()}`,
+            value: query?.produto?.toString(),
+          },
+        ]}
+      />
 
       <WapperInfoProduct>
         <WapperContentInfoTop>

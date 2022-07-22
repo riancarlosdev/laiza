@@ -1,7 +1,7 @@
 export const categorys = [
   {
     id: '1',
-    value: 'Esporte e Fitness',
+    value: 'Informatica',
     image: 'https://via.placeholder.com/60',
   },
   {

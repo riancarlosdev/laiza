@@ -43,7 +43,9 @@ export const HomePage: React.FC = (): JSX.Element => {
             </WapperTop>
             <WapperOfferProduct>
               {offers.map(item => (
-                <Link href="/product/545">
+                <Link
+                  href={`/categoria/${item.slug.category}/${item.slug.sub_category}/${item.slug.title}/${item.slug.id}`}
+                >
                   <a>
                     <WapperOfferProductItem>
                       <ProductItem {...item} />

@@ -7,6 +7,12 @@ export const offers = [
     porcent: '10',
     price_old: '149,98',
     img: 'https://via.placeholder.com/200x250',
+    slug: {
+      category: 'informática',
+      sub_category: 'moto-g3',
+      title: 'Capinha de Celular Moto G3 Preta',
+      id: '12154898765465',
+    },
   },
   {
     id: '2',
@@ -16,6 +22,12 @@ export const offers = [
     porcent: '10',
     price_old: '189,90',
     img: 'https://via.placeholder.com/200x250',
+    slug: {
+      category: 'informática',
+      sub_category: 'moto-g3',
+      title: 'Capinha de Celular Moto G3 Preta',
+      id: '12154898765465',
+    },
   },
   {
     id: '3',
@@ -25,6 +37,12 @@ export const offers = [
     porcent: '10',
     price_old: '149,98',
     img: 'https://via.placeholder.com/200x250',
+    slug: {
+      category: 'informática',
+      sub_category: 'moto-g3',
+      title: 'Capinha de Celular Moto G3 Preta',
+      id: '12154898765465',
+    },
   },
   {
     id: '4',
@@ -34,6 +52,12 @@ export const offers = [
     porcent: '10',
     price_old: '189,90',
     img: 'https://via.placeholder.com/200x250',
+    slug: {
+      category: 'informática',
+      sub_category: 'moto-g3',
+      title: 'Capinha de Celular Moto G3 Preta',
+      id: '12154898765465',
+    },
   },
   {
     id: '5',
@@ -43,5 +67,11 @@ export const offers = [
     porcent: '10',
     price_old: '149,98',
     img: 'https://via.placeholder.com/200x250',
+    slug: {
+      category: 'informática',
+      sub_category: 'moto-g3',
+      title: 'Capinha de Celular Moto G3 Preta',
+      id: '12154898765465',
+    },
   },
 ];
